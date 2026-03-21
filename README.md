@@ -91,12 +91,56 @@ Input: `[-4, -1, 0, 3, 10]`
 DAILY PROBLEM JOURNAL — #5
 
 Problem: LC 283 — Move Zeroes
+
 Pattern: Two Pointers — Same Direction
+
 Recognized: Because we need to move elements around in-place without extra space
+
 Brute Force: Collect non-zeros in new array, fill rest with zeros | O(n) time | O(n) space
+
 Optimal: Two pointers same direction — j tracks position for non-zero, i scans | O(n) time | O(1) space
+
 Key Insight: i moves forward always. j only moves when a non-zero is placed. After first loop, everything from j to end must be zero.
 Mistakes: None this time! 🔥
 Confidence: ⭐⭐⭐
+
+
+
+
+DAILY PROBLEM JOURNAL — #6 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: LC 26 — Remove Duplicates from Sorted Array
+
+Pattern: Two Pointers — Same Direction
+
+Recognized: Because array is sorted and we need to modify in-place without extra space — duplicates are always adjacent in sorted array
+
+Brute Force: Use a Set to store unique elements, copy back | O(n) time | O(n) space
+
+Optimal: Two pointers same direction — i tracks last unique, j scans | O(n) time | O(1) space
+
+Key Insight: i stays behind and only moves when a new unique element is found. j scans every element. When nums[j] != nums[i], increment i and place nums[j] there. At the end i+1 gives the count because index starts at 0.
+
+New things learned:
+
+index + 1 = count — no need for separate count variable, index itself tells the count
+nums[++i] = increment i first, then use it — combines two lines into one
+for loop handles j++ automatically — cleaner than while for scanning
+Edge Cases:
+
+Single element → j starts at 1, loop never runs → return 1 ✅
+All duplicates like [1,1,1] → i stays at 0, return 1 ✅
+No duplicates like [1,2,3] → i moves every step, return length ✅
+Mistakes:
+
+i and j starting positions were confusing — i=0 tracks unique, j=1 scans
+Used else if instead of just else
+Forgot return i+1 — method returns int!
+Extra closing bracket — always count {} carefully
+Confidence: ⭐⭐⭐
+
+
+
+
 
 
