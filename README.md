@@ -89,7 +89,7 @@ Input: `[-4, -1, 0, 3, 10]`
 **Confidence:** ⭐⭐⭐
 
 DAILY PROBLEM JOURNAL — #5
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 Problem: LC 283 — Move Zeroes
 Pattern: Two Pointers — Same Direction
 Recognized: Because we need to move elements around in-place without extra space
