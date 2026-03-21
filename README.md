@@ -88,9 +88,15 @@ Input: `[-4, -1, 0, 3, 10]`
 
 **Confidence:** ⭐⭐⭐
 
----
+DAILY PROBLEM JOURNAL — #5
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Problem: LC 283 — Move Zeroes
+Pattern: Two Pointers — Same Direction
+Recognized: Because we need to move elements around in-place without extra space
+Brute Force: Collect non-zeros in new array, fill rest with zeros | O(n) time | O(n) space
+Optimal: Two pointers same direction — j tracks position for non-zero, i scans | O(n) time | O(1) space
+Key Insight: i moves forward always. j only moves when a non-zero is placed. After first loop, everything from j to end must be zero.
+Mistakes: None this time! 🔥
+Confidence: ⭐⭐⭐
 
-Update GitHub and that's a wrap for today! 🔥
-
-You solved 4 problems, mastered two pointers opposite ends, and built a solid habit. See you tomorrow! 💪
 
