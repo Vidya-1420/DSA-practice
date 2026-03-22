@@ -139,6 +139,35 @@ Forgot return i+1 — method returns int!
 Extra closing bracket — always count {} carefully
 Confidence: ⭐⭐⭐
 
+DAILY PROBLEM JOURNAL — #7
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Problem: LC 167 — Two Sum II
+Pattern: Two Pointers — Opposite Ends
+Recognized: Because array is sorted and we need two elements that sum to target — sorted array + pair finding = opposite ends two pointer
+Brute Force: Nested loop check every pair | O(n²) time | O(1) space
+Optimal: Two pointers from both ends, move based on sum | O(n) time | O(1) space
+Key Insight: If sum is too big → right must come down → right--. If sum too small → left must go up → left++. Starting at opposite ends covers maximum range and narrows down. Works for negative numbers too!
+New things learned:
+
+return new int[]{left+1, right+1} — create and return array in one line
+return null at end — Java needs every code path to return something even if it never executes
+Fixed size array like new int[2] is always O(1) space — only grows with input size counts as O(n)
+1-indexed means always return index + 1
+
+Edge Cases:
+
+Two elements only → one step, immediate answer
+Negative numbers → works exactly the same way
+Answer always at first step → pointers never move
+
+Mistakes:
+
+Added indices instead of values → left + right instead of numbers[left] + numbers[right]
+Forgot return null at end → compile error
+
+Confidence: ⭐⭐⭐
+
+
 
 
 
